@@ -39,34 +39,44 @@
 Si sale algun tipo de tecnología o estandar en la Web también tratan de actualizarse para ponerse al día.
 
 ### Angular
-* Is a full Featured Framework
+* Is a full Featured Framework.
+
 Angular es un framework completo a diferencia de ReactJS y VueJS, por ejemplo si dedicimos aprender angular o VueJS, cuando creemos un proyecto utilizándolos, luego tendremos que decidir que proyecto o librería utilizar para poder crecer, es decir, que biblioteca de enrutamiento necesitamos, que biblioteca para manejar los formularios necesitamos, etc.
 
 * Is the upgrade for the most popular js ___framework___ developed by Google.
+
 Este framework es conocido como AngularJS, por el año 2007-2008 aproximandamente AngularJS empezaba a ser bastante popupal para crear aplicaciones detro de un navegador. Utilizaba JS EC5
 
 * Versions: angularjs, 2 ,4 , 5, 6. Now is just Angular.
+
 Al intentar mejorar el framework, buscó un lenguaje, que le diera funcionalidades añadidas a JS, este leguaje es TS, Es desarrollado por Microsoft y le permite a los desarrolladores de AngularJS mejorarlo a tal punto que es practicamente distinto. Entonces Angular 2 y AngularJS son completamente distintos, luego empieza a salir Angular 2, 4, 5, 6, no sale la tres por problemas del nombre o por conflictos, desde estas versiones solo se llama ___Angular___
 
 * All alone to build an entire SPA: animations, routing, http, D/I, Testing.
+
 Angular es un framework con el objetivo de crear Single Page Aplicattions, Antes se utilizaba lenguajes del Back-End.
 
 * Use Typescript, a superset  of Javascript developed by Microsoft.
+
 Utiliza un lenguaje para crear aplicaciones un poco mas simple, un poco más fácil. TS es un lenguaje superconjunto de Microsoft, permite añadir funcionalidades a JS y poder crear aplicaciones grandes usando solo JS con funcionalidades añadidas obviamente.
 
 * A easy transition from ___enterprise___ framework as spring, .NET.
+
 Si conoces Java o C#, ahora conocer Angular con TS será muy sencillo adaptarse.
 
 * You can build mobile hybrid apps with Ionic.
+
 No solo puedes desarrollar aplicaciones con Angular, también se puede desarrollar aplicaciones híbridas, aplicaciones móviles híbridas para ser exacto. Cuando hablamos de aplicaciones con datos intencivos las app híbridas puede no ser la mejor alternativa.
 
 * And Mobile Apps with NativeScript.
+
 Java, Objetive-C, Swift. Aplicaciones nativas.
+
 
 2. Angular 2 Sale septiembre del 2016
 
 
 Tips. Angular Ayuda al desarrollador a manejar el estado.
+
 http://blog.desafiolatam.com/vale-la-pena-aprender-programar-con-angularjs/
 https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html
 
