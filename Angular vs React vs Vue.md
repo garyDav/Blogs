@@ -63,6 +63,13 @@ No solo puedes desarrollar aplicaciones con Angular, también se puede desarroll
 * And Mobile Apps with NativeScript.
 Java, Objetive-C, Swift. Aplicaciones nativas.
 
+2. Angular 2 Sale septiembre del 2016
+
+
+Tips. Angular Ayuda al desarrollador a manejar el estado.
+http://blog.desafiolatam.com/vale-la-pena-aprender-programar-con-angularjs/
+https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html
+
 
 ### ReactJS
 * It Is a lightway and efficient library to built UI.
