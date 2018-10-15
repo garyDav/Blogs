@@ -67,4 +67,48 @@ __Explicación__
 7. Fecha de la ultima modificación.
 8. Nombre del directorio o archivo.
 
-__j__
+__Comandos__
+
+* `ls -lh`, la bandera `h` nos mostrará la información leible para humanos
+
+* `pwd`, muestra la __ruta__ de directorios, en donde nos encontremos
+
+* `tree`, muestra en forma de __árbol__ todos los directorios y archivos
+
+* `ls -lha`, __listar__ todo el contenido del directorio que nos encontramos, en una forma listada hacia abajo, en una manera humana, y mostrar archivos ocultos. Como vemos tenemos el directorio __.__ (punto) y el directorio __..__ (punto punto)
+
+* `cd .`, simplemente __ingresa__ en el directorio en el que estaba
+
+* `cd ..`, dá un paso __atrás__ en la ruta de directorios
+
+* `cd ̣~`, apunta al directorio `home/user`, podríamos suponer que `~` es un alias que apunta al nuetra ubicación principal
+
+### Manipulación y modificación del árbol de directorios
+
+* `mkdir [directorio]`, __crea un directorio__, [directorio] remplazar este por un nombre para el directorio
+
+* `touch [archivo]`, __crea un archivo__, ejemplo: `touch prueba.md`
+
+* Para __reenombrar__ un directorio o un archivo usamos el comando `mv`, de trasfondo lo que en verdad hace es __mover__ el archivo o directorio, aprovechando este efecto podemos modificar el nombre, un ejemplo sería: Primero creamos un directorio y un archivo en la ruta donde nos encontramos `mkdir ejemplo`, `touch prueba.md`, ahora modificamos cada uno de ellos, `mv ejemplo ejemploMod`, de la misma manera el archivo, `mv prueba.md pruebaMod.md`
+
+* Si queremos mover un archivo o un directorio a otra ruta: `mv prueba.md ruta/larga/`, otr ejemplo `mv carpeta /raiz/ruta/muy/larga/`
+
+* Para __eliminar__ un archivo o un directorio es: `rm prueba.md`, para eliminar un directorio necesitamos la bandera `-r`, obcionalmente podemos añadir la bandera `-f`, el ejemplo sería: `rm -rf ejemplo`
+
+* `man ls`, lo que hace es mostrar un __manual__ del comando que querramos
+
+* Para poder __copiar__ un archivo al directorio padre: `cp prueba.md ..`, para copiar un directorio: `cp ejemplo -r ~/prueba/`, si queremos ver los cambios: para el archivo: `ls -l ..`, para el directorio: `ls -l ~/prueba/`
+
+* Si nos encontramos en `/home/user/prueba/`, y queremos movernos a una ruta, pero no quiero perder la ruta actual tememos dos comando para ello: `pushd ~/mi/ruta/muy/larga/`, funciona muy parecido al comando `cd`, para confirmar que nos cambiamos de ruta escribimos: `pwd`, ahora para volver (atrás), a la ruta `/home/user/prueba/`, sin el comando `cd`, usamos el comando `popd`, confirmamos con el comando `pwd`
+
+### Herramientas básicas
+
+* `open pagina.html`, abre el archivo con el programa predeterminado para ese tipo de archivos
+
+>El equivalente del comando `open` de macOS, en Sistemas Operativos GNU/linux es `xdg-open`
+
+* `more prueba.md`, lee las `n` lineas del archivo, si tiene mucho contenido podemos precionar __enter__ para bajar línea por línea, si queremos retroceder precionamos __B__
+
+* `cat prueba.md`, muestra todo el contenido el archivo
+
+
