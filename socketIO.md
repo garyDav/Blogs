@@ -1,7 +1,7 @@
 # APLICACIONES EN TIEMPO REAL
 ---
 
-![Imagen 1](/home/gary/Proyectos/nodejs/10-SocketIO/img/img1.png)
+![Imagen 1](https://github.com/garyDav/Blogs/blob/master/img/img1.png)
 
 #### Web sockets
 
