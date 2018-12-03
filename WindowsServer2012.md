@@ -142,9 +142,123 @@ __Diferentes tipos de Discos Duros__
 
 __Hablando de las Particiones de Discos__
 
-Es una
+Una partición es una unidad lógica de almacenamiento, usada para dividir un __disco duro__ físico en varias partes, cómo si se tratase de múltiples discos. De esta manera cada partición puede usar sistemas de archivos diferentes.
+
+La partición se hace normalmente, por razones de mantenimiento, rendimiento, manejo, etc.
 
 ![Imagen 22](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen22.png)
+
+En este ejemplo un disco duro tiene tres particiones, con diferentes Sistemas Operativos.
+
+![Imagen 23](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen23.png)
+
+__Sistemas de Archivo__
+
+Es la forma en que los Sistemas Operativos guardan la información.
+
+![Imagen 24](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen24.png)
+
+__Memoria RAM__
+
+De sus siglas (Random Access Memory) de denomina acceso aleatorio, por que se puede leer o escribir en una posición de memoria con un tiempo de espera igual para cualquier posición, evitando de esta forma seguir un orden para acceder a esta información de la manera más rápida posible.
+
+![Imagen 25](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen25.png)
+
+__Tipos de Memoria RAM que existen__
+
+![Imagen 26](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen26.png)
+
+__Algunos Tipos de Memorias__
+
+Comparación de las Memorias DDR de la familia SDRAM.
+
+![Imagen 27](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen27.png)
+
+__Conceptos Básicos sobre Redes de Datos__
+
+__¿Que es una red de datos?__
+
+Es un conjunto de equipos informáticos o computadoras, conectadas entre sí, por medio de dispositivos físicos que envían y reciven impulsos eléctricos, ondas electromagnéticas, o cualquier otro medio para el transporte de datos, con la finalidad de compartir información o recursos, y ofrecer servicios.
+
+![Imagen 28](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen28.png)
+
+__Tipos de Redes de Datos que existen__
+
+Los tres tipos de redes básicos son:
+
+![Imagen 29](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen29.png)
+
+![Imagen 30](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen30.png)
+
+>Un nodo o un host, no es más que cualquier dispositivo conectado a la red.
+
+* Por ejemplo, si tenemos conectados unas computadoras en un edificio completo, o un edicicio que está a lado, y todos estan conectados en red, eso es una red __LAN__.
+
+* Pero si tengo un edicicio en Santo Domingo y otro en Estados Unidos, o Venezuela, o en México, entonces es una red __WAN__.
+
+* __WLAN__ son las redes __LAN__ pero de forma Wireless, o inalámbirca, sin la necesidad de conectar un cable.
+
+__Hablando de las Direcciones IP__
+
+__¿Qué es una dirección IPv4?__
+
+Es una etiqueta numérica que indica de manera lógica y jerárquica a una interfaz, una interfaz no es más que cualquier elemento de comunicación o conexión, en pocas palabras informa de manera lógica y jerárquica a un interfaz de un dispositivo dentro de una red que utiliza un protocolo IP (Internet Protocol), con esta versión de direcciones IPv4, podemos tener hasta cuatro mil millones de direcciones IP disponible
+
+![Imagen 31](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen31.png)
+
+Una dirección IP no es más que un número único que se le asigna a cada computadora, conectada a la red 
+
+![Imagen 32](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen32.png)
+
+Las direcciones IPv4 se expresan por un número binario de 32bits, permitiendo un espacio de direccionamiento de hasta 4 294 967 296 (2<sup>32</sup>) direcciones posibles, las direcciones IPv4 se pueden expresar como números de notación decimal, se dividen los 32bits en cuatro grubos divididos por puntos.
+
+![Imagen 33](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen33.png)
+
+La dirección IP presentada en la imagen sería lo mismo decir: 
+__$$11111111.11111111.11111111.0$$__
+
+Por eso se dice que cada número separado por punto es un __octeto__
+
+__Tipos de Direcciones IP__
+
+Tenemos dos tipos de direcciones IP __Públicas__ y __Privadas__, En esta guía utilizaremos las direcciones IP __Privadas__, para asignar a cada uno de los computadores que se van a conectar a al red que vamos a crear más adelante.
+
+![Imagen 34](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen34.png)
+
+__Tipos de Direcciones IP__
+
+Las direcciones IP que empiezen en su primer octeto con: __10, 172 o 192__, son direciones IP __privadas__ las demás serán __públicas__.
+
+![Imagen 35](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen35.png)
+
+__Clases de Direcciones IP en las Privadas__
+
+En la __Clase A__, el primer grupo define la dirección de red, los siguientes tres grupos define los nodos ó host en la red.
+
+Em la __Clase B__, los dos primeros grupos definen la dirección de red, los dos siguientes definen la dirección de host.
+
+En la __Clase C__, los tres primeros grupos definen la dirección de red, y el último grupo define la direción de host.
+
+Para que se entienda más claro, en una __Clase C__ yo puedo tener menos direcciones IP disponibles que en una __Clase B__, y ésta a su vez mucho menos a una __Clase A__.
+
+![Imagen 36](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen36.png)
+
+Normalmente Los __ISP__ (Internet Service Provider), proveedores de servicios de internet, proveen direcciones IP de la __Clase A__ a nivel privado, para que el usuario pueda tener todas las direcciones posibles para instalar.
+
+__Mascara de Subred__
+
+![Imagen 37](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen37.png)
+
+__Entrando en IPv6__
+
+¿Que pasa cuando las direcciones IPv4 se terminen?
+
+![Imagen 38](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen38.png)
+
+__Por que se esta migrando a IPv6__
+
+![Imagen 39](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen39.png)
+
 
 ### Módulo 4
 
@@ -156,7 +270,6 @@ __Nombre para el Servidor__
 
 ¿Por que un nombre para el Server?
 
-
 ____
 ```shell
 ```
@@ -165,9 +278,32 @@ ____
 __Cambiar nombre del Servidor__
 
 ```shell
+> powershell
 > hostname
 WIN-4F0L49ABEF8
 > rename-computer PSDC-HOJA
 WARNING: The changes will take effect after you restart the computer WIN-4F0L49ABEF8.
 > shutdown /s
 ```
+
+__Definir una IP Estática__
+
+Un punto muy importante es decir a que InterfaceAlias quiero aplicar el cambio
+
+```shell
+> Get-netipaddress
+IPAddress       : fe80::5efe:192.168.1.10%13
+InterfaceIndex  : 13
+InterfaceAlias  : isatap.{2426A078-DAA7-4DF7-911E-2DB9F068ABBA}
+AddressFamily   : IPv6
+Type            : Unicast
+...
+> New-netipaddress
+cmdlet New-NetIPAddress at command pipe line position 1
+Supply values for the following parameters:
+IPAddress: 192.168.1.1
+InterfaceAlias: ethernet
+> cls
+```
+
+Habilitar el Remote Desktop
