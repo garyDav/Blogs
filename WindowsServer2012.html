@@ -1,0 +1,558 @@
+<!DOCTYPE html><html><head>
+      <title>WindowsServer2012</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/gary/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.11/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="resumen-del-curso-capacity">Resumen del Curso CAPACITY</h1>
+
+<h2 class="mume-header" id="hablando-de-los-sistemas-operativos-para-servidores">Hablando de los Sistemas Operativos para Servidores</h2>
+
+<h3 class="mume-header" id="m%C3%B3dulo-1">M&#xF3;dulo 1</h3>
+
+<p><strong>Objetivo pricipal del Sistema Operativo:</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen1.png" alt="Imagen 1"></p>
+<p><strong>Funciones del Sistema Operativo:</strong></p>
+<ol>
+<li>
+<p>Control de acceso a hardware</p>
+</li>
+<li>
+<p>Administraci&#xF3;n de archivos y carpetas</p>
+</li>
+<li>
+<p>Proporciona una interfaz de usuario</p>
+</li>
+<li>
+<p>Administra aplicaciones</p>
+</li>
+</ol>
+<p><strong>1. Funciones del Sistema Operativo (Control de Hardware)</strong></p>
+<p>El Sistema Operativo tiene 4 capas</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen2.png" alt="Imagen 2"></p>
+<p><strong>2. Funciones del Sistema Operativo (Archivos y Carpetas)</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen3.png" alt="Imagen 3"></p>
+<p><strong>3. Funciones del Sistema Operativo (Interfaz de Usuario)</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen4.png" alt="Imagen 4"></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen5.png" alt="Imagen 5"></p>
+<p><strong>4. Funciones del Sistema Operativo (Administraci&#xF3;n de App)</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen6.png" alt="Imagen 6"></p>
+<p><strong>Estaciones de trabajo</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen7.png" alt="Imagen 7"></p>
+<p><strong>Sistemas Operativos para Estaciones de Trabajo</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen8.png" alt="Imagen 8"></p>
+<p><strong>&#xBF;Que es un Servidor?</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen9.png" alt="Imagen 9"></p>
+<p>Es una computadora en el que se ejecutan un programa que realiza alguna tarea en beneficio a otras aplicaciones llamadas (Clientes), tanto si se trata de un ordenador central conocido como Mainframe, o un mini ordenador, una computadora personal, una PDA, o un sistema Embebido, sin embargo hay computadoras destinadas &#xFA;nicamente a proveer los servicios de estos programas. &#xC9;stos son los servidores Antonomasia.</p>
+<p><strong>Tipos de Servidores que existen</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen10.png" alt="Imagen 10"></p>
+<p>Tenemos el servidor normal; un servidor Proxy o Firewall, un servidor corta fuego, el cual se utiliza para serguridad; un servidor de correo electr&#xF3;nico; servidor de archivos; servidor de base de datos; y servidores de directorio, que es espec&#xED;ficamente lo que vamos a tratar en este curso.</p>
+<p>Dependiendo del objetivo del servidor que se necesite, existen diferentes tipos de servidores, auque el tipo lo v&#xE1; a definir a la hora de instalar. Es decir a la hora de instalar el servidor definiremos para que se v&#xE1; a utilizar ese servidor, no confundir que los fabricantes venden tipos de servidores.</p>
+<p><strong>Sistemas Operativos para Servidores</strong></p>
+<p>Tenemos tres tipos de Sistemas Operativos para servidores:</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen11.png" alt="Imagen 11"></p>
+<p><strong>Redhat</strong></p>
+<p>Puede ser descargado de internet, tiene vastantes programas socios, brinda un exlente rendimiento, seguridad, escalabilidad, y disponibilidad, es un SO de GNU/Linux, su nucleo est&#xE1; basado en Debian, este SO es utilizado de manera gratuita, auque muchas de las distribuciones de RedHat se compram auque a bajo costo.</p>
+<p><strong>Hablando de Windows Server 2012</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen12.png" alt="Imagen 12"></p>
+<p>Es una edici&#xF3;n lanzada por la compa&#xF1;&#xED;a de Microsoft Corparation del SO Windows Server, su predecesor era Windows Server 2008 R2, el software est&#xE1; disponible desde el 4 de septiembre del 2012</p>
+<p>Windows Server 2012 no tiene soporte para computadoras con procesador de 32-bit (IA-32) o Itanium (IA-64), y se vende b&#xE1;sicamente en 4 ediciones como: Datacenter, Standard, Essentials, y Foundation.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen13.png" alt="Imagen 13"></p>
+<p>Se agreg&#xF3; y mejor&#xF3; algunas caracter&#xED;sticas comparado con la versi&#xF3;n del 2008, como Hyper-V, Rol y Administraciones de Direcciones IP, una nueva versi&#xF3;n de tag manager y se presenta un nuevo sistema de archivos llamado REFS</p>
+<p><strong>Versiones de Windows Server 2012</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen14.png" alt="Imagen 14"></p>
+<p>Windows Server 2012 solo viene estas 4 versiones, Windows Server 2008 ofrec&#xED;a 12 versiones distintas. Un punto muy importante es que este cambio implica que los Administradores de Sistemas no tendr&#xE1;n que estudiar muchas horas sobre cual ser&#xE1; la m&#xE1;s adecuada para los Servidores.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen15.png" alt="Imagen 15"></p>
+<ul>
+<li>
+<p>Fundation: No tiene derecho a virtualizaci&#xF3;n y no tiene varias obciones</p>
+</li>
+<li>
+<p>Essentials: Tiene un derecho limitado a virtualizaci&#xF3;n</p>
+</li>
+<li>
+<p>Standard: Tiene dos instancias de virtualizaci&#xF3;n</p>
+</li>
+<li>
+<p>Datacenter: Tiene un numero ilimitado de virutalizaciones</p>
+</li>
+</ul>
+<blockquote>
+<p>Windows Server 2012 fu&#xE9; creado espec&#xED;ficamente para trabajar con lo que hoy conocemos como <strong>cloud computing</strong></p>
+</blockquote>
+<p><strong>Nuevas Caracter&#xED;sticas de Windows Server 2012</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen16.png" alt="Imagen 16"></p>
+<blockquote>
+<p>Hyper-V me permite manejar m&#xE1;quinas virtuales en el Servidor</p>
+</blockquote>
+<p><strong>Windows Power Shell</strong></p>
+<p>No es mas que una consola de administraci&#xF3;n de comandos, me permite hacer todas las gestiones del SO, pero a nivel de comando</p>
+<p>El <strong>Power Shell</strong> es una interfaz de consola o (CLI) con posibilidad de escritura y con funci&#xF3;n de comandos, por medio de guiones (script), es mucho mas rica e iteractiva que su predecesor del DOS hasta Windows 7</p>
+<p>Est&#xE1; dise&#xF1;ada para su uso, por parte de los administradores de sistema, con el prop&#xF3;sito de automatizar tareas o realizarlas de forma m&#xE1;s controlada</p>
+<p><strong>Comandos mas usados para Power Shell</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen17.png" alt="Imagen 17"></p>
+<p><strong>Puntos importantes para adquirir un Servidor</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen18.png" alt="Imagen 18"></p>
+<p><strong>Resumen del Cap&#xED;tulo</strong></p>
+<ol>
+<li>
+<p>Que es un Sistema Operativo.</p>
+</li>
+<li>
+<p>Funciones del Sistema Operativo.</p>
+</li>
+<li>
+<p>Sistemas Operativos para Estaciones de Trabajo.</p>
+</li>
+<li>
+<p>Sistemas Operativos para Servidores.</p>
+</li>
+<li>
+<p>Hablando de Windows Server 2012.</p>
+</li>
+<li>
+<p>Versiones de Windows Server 2012.</p>
+</li>
+<li>
+<p>Nuevas Caracter&#xED;sticas de Windows Server 2012.</p>
+</li>
+<li>
+<p>Power Shell de Windows.</p>
+</li>
+<li>
+<p>Puntos a tener en cuenta para adquirir un Servidor.</p>
+</li>
+</ol>
+<h2 class="mume-header" id="conceptos-b%C3%A1sicos-para-trabajar-con-windows-server-2012">Conceptos B&#xE1;sicos para trabajar con Windows Server 2012</h2>
+
+<h3 class="mume-header" id="m%C3%B3dulo-2">M&#xF3;dulo 2</h3>
+
+<p><strong>Unidades de medida inform&#xE1;tica</strong></p>
+<p>Es la forma en la que yo mido la cantidad de lo que estoy trabajando en inform&#xE1;tica, mide el volumen o la cantidad de informaci&#xF3;n, de un disco duro por ejemplo</p>
+<p>Para sintesisar tantos n&#xFA;mero y para que se entienda, en inform&#xE1;tica existen las unidades de medida</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen19.png" alt="Imagen 19"></p>
+<p><strong>Que es un Disco Duro</strong></p>
+<p>la unidad de disco duro o unidad de disco r&#xED;gido (en ingl&#xE9;s: hard disk drive, HDD) es el dispositivo de almacenamiento de datos que emplea un sistema de grabaci&#xF3;n magn&#xE9;tica para almacenar archivos digitales</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen20.png" alt="Imagen 20"></p>
+<p><strong>Diferentes tipos de Discos Duros</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen21.png" alt="Imagen 21"></p>
+<p><strong>Hablando de las Particiones de Discos</strong></p>
+<p>Una partici&#xF3;n es una unidad l&#xF3;gica de almacenamiento, usada para dividir un <strong>disco duro</strong> f&#xED;sico en varias partes, c&#xF3;mo si se tratase de m&#xFA;ltiples discos. De esta manera cada partici&#xF3;n puede usar sistemas de archivos diferentes.</p>
+<p>La partici&#xF3;n se hace normalmente, por razones de mantenimiento, rendimiento, manejo, etc.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen22.png" alt="Imagen 22"></p>
+<p>En este ejemplo un disco duro tiene tres particiones, con diferentes Sistemas Operativos.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen23.png" alt="Imagen 23"></p>
+<p><strong>Sistemas de Archivo</strong></p>
+<p>Es la forma en que los Sistemas Operativos guardan la informaci&#xF3;n.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen24.png" alt="Imagen 24"></p>
+<p><strong>Memoria RAM</strong></p>
+<p>De sus siglas (Random Access Memory) de denomina acceso aleatorio, por que se puede leer o escribir en una posici&#xF3;n de memoria con un tiempo de espera igual para cualquier posici&#xF3;n, evitando de esta forma seguir un orden para acceder a esta informaci&#xF3;n de la manera m&#xE1;s r&#xE1;pida posible.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen25.png" alt="Imagen 25"></p>
+<p><strong>Tipos de Memoria RAM que existen</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen26.png" alt="Imagen 26"></p>
+<p><strong>Algunos Tipos de Memorias</strong></p>
+<p>Comparaci&#xF3;n de las Memorias DDR de la familia SDRAM.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen27.png" alt="Imagen 27"></p>
+<p><strong>Conceptos B&#xE1;sicos sobre Redes de Datos</strong></p>
+<p><strong>&#xBF;Que es una red de datos?</strong></p>
+<p>Es un conjunto de equipos inform&#xE1;ticos o computadoras, conectadas entre s&#xED;, por medio de dispositivos f&#xED;sicos que env&#xED;an y reciven impulsos el&#xE9;ctricos, ondas electromagn&#xE9;ticas, o cualquier otro medio para el transporte de datos, con la finalidad de compartir informaci&#xF3;n o recursos, y ofrecer servicios.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen28.png" alt="Imagen 28"></p>
+<p><strong>Tipos de Redes de Datos que existen</strong></p>
+<p>Los tres tipos de redes b&#xE1;sicos son:</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen29.png" alt="Imagen 29"></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen30.png" alt="Imagen 30"></p>
+<blockquote>
+<p>Un nodo o un host, no es m&#xE1;s que cualquier dispositivo conectado a la red.</p>
+</blockquote>
+<ul>
+<li>
+<p>Por ejemplo, si tenemos conectados unas computadoras en un edificio completo, o un edicicio que est&#xE1; a lado, y todos estan conectados en red, eso es una red <strong>LAN</strong>.</p>
+</li>
+<li>
+<p>Pero si tengo un edicicio en Santo Domingo y otro en Estados Unidos, o Venezuela, o en M&#xE9;xico, entonces es una red <strong>WAN</strong>.</p>
+</li>
+<li>
+<p><strong>WLAN</strong> son las redes <strong>LAN</strong> pero de forma Wireless, o inal&#xE1;mbirca, sin la necesidad de conectar un cable.</p>
+</li>
+</ul>
+<p><strong>Hablando de las Direcciones IP</strong></p>
+<p><strong>&#xBF;Qu&#xE9; es una direcci&#xF3;n IPv4?</strong></p>
+<p>Es una etiqueta num&#xE9;rica que indica de manera l&#xF3;gica y jer&#xE1;rquica a una interfaz, una interfaz no es m&#xE1;s que cualquier elemento de comunicaci&#xF3;n o conexi&#xF3;n, en pocas palabras informa de manera l&#xF3;gica y jer&#xE1;rquica a un interfaz de un dispositivo dentro de una red que utiliza un protocolo IP (Internet Protocol), con esta versi&#xF3;n de direcciones IPv4, podemos tener hasta cuatro mil millones de direcciones IP disponible</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen31.png" alt="Imagen 31"></p>
+<p>Una direcci&#xF3;n IP no es m&#xE1;s que un n&#xFA;mero &#xFA;nico que se le asigna a cada computadora, conectada a la red</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen32.png" alt="Imagen 32"></p>
+<p>Las direcciones IPv4 se expresan por un n&#xFA;mero binario de 32bits, permitiendo un espacio de direccionamiento de hasta 4 294 967 296 (2<sup>32</sup>) direcciones posibles, las direcciones IPv4 se pueden expresar como n&#xFA;meros de notaci&#xF3;n decimal, se dividen los 32bits en cuatro grubos divididos por puntos.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen33.png" alt="Imagen 33"></p>
+<p>La direcci&#xF3;n IP presentada en la imagen ser&#xED;a lo mismo decir:<br>
+<strong><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>11111111.11111111.11111111.0</mn></mrow><annotation encoding="application/x-tex">11111111.11111111.11111111.0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">.</span><span class="mord">0</span></span></span></span></span></strong></p>
+<p>Por eso se dice que cada n&#xFA;mero separado por punto es un <strong>octeto</strong></p>
+<p><strong>Tipos de Direcciones IP</strong></p>
+<p>Tenemos dos tipos de direcciones IP <strong>P&#xFA;blicas</strong> y <strong>Privadas</strong>, En esta gu&#xED;a utilizaremos las direcciones IP <strong>Privadas</strong>, para asignar a cada uno de los computadores que se van a conectar a al red que vamos a crear m&#xE1;s adelante.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen34.png" alt="Imagen 34"></p>
+<p><strong>Tipos de Direcciones IP</strong></p>
+<p>Las direcciones IP que empiezen en su primer octeto con: <strong>10, 172 o 192</strong>, son direciones IP <strong>privadas</strong> las dem&#xE1;s ser&#xE1;n <strong>p&#xFA;blicas</strong>.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen35.png" alt="Imagen 35"></p>
+<p><strong>Clases de Direcciones IP en las Privadas</strong></p>
+<p>En la <strong>Clase A</strong>, el primer grupo define la direcci&#xF3;n de red, los siguientes tres grupos define los nodos &#xF3; host en la red.</p>
+<p>Em la <strong>Clase B</strong>, los dos primeros grupos definen la direcci&#xF3;n de red, los dos siguientes definen la direcci&#xF3;n de host.</p>
+<p>En la <strong>Clase C</strong>, los tres primeros grupos definen la direcci&#xF3;n de red, y el &#xFA;ltimo grupo define la direci&#xF3;n de host.</p>
+<p>Para que se entienda m&#xE1;s claro, en una <strong>Clase C</strong> yo puedo tener menos direcciones IP disponibles que en una <strong>Clase B</strong>, y &#xE9;sta a su vez mucho menos a una <strong>Clase A</strong>.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen36.png" alt="Imagen 36"></p>
+<p>Normalmente Los <strong>ISP</strong> (Internet Service Provider), proveedores de servicios de internet, proveen direcciones IP de la <strong>Clase A</strong> a nivel privado, para que el usuario pueda tener todas las direcciones posibles para instalar.</p>
+<p><strong>Mascara de Subred</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen37.png" alt="Imagen 37"></p>
+<p><strong>Entrando en IPv6</strong></p>
+<p>&#xBF;Que pasa cuando las direcciones IPv4 se terminen?</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen38.png" alt="Imagen 38"></p>
+<p><strong>Por que se esta migrando a IPv6</strong></p>
+<p>La Comporaci&#xF3;n de Inernet para la Asignaci&#xF3;n de Nombres y N&#xFA;meros, en ingl&#xE9;s <strong>Internet Corporation for Assigned Names and Numbers (ICANN)</strong>, es una organizaci&#xF3;n sin fines de lucro, con el objetivo principal de encargarse de sierto n&#xFA;meros de tareas realizadas con anterioridad a esa fecha por otra organizaci&#xF3;n que era la <strong>IANA</strong> sucede y radica en California y est&#xE1; sujeta a las leyes de dicho Estado, en pocas palabras <strong>ICANN</strong> es quien tiene el Almac&#xE9;n de direcciones IP, la f&#xE1;brica de IP tiene muchas cajas de direcciones IP posibles.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen39.png" alt="Imagen 39"></p>
+<p><strong>&#xBF;Que es IPv6?</strong></p>
+<p>Una direcci&#xF3;n IPv4, es una direcci&#xF3;n IP de 32bits, y est&#xE1; clasificado o dividida en cuatro grupo de n&#xFA;meros dividido por puntos.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen40.png" alt="Imagen 40"></p>
+<p>IPv6 es una direcci&#xF3;n de ocho grupos de numeraciones divididas por dos putos, tienen 128bits.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen41.png" alt="Imagen 41"></p>
+<p><strong>Puntos a tener en cuenta</strong></p>
+<p>Hay que tener cuatro puntos bien claro:</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen42.png" alt="Imagen 42"></p>
+<blockquote>
+<p>Antes de ver en detalle cada punto observe que cada punto cuenta con dos direcciones IP, la segunda es como debe ser la notaci&#xF3;n.</p>
+</blockquote>
+<ol>
+<li>
+<p>Esta direcci&#xF3;n nos dice que los ceros delante de cada grupo se pueden omitir,no importa si las letras son may&#xFA;sculas o min&#xFA;sculas, son n&#xFA;meros hexadecimales con los n&#xFA;meros del <strong>0</strong> al <strong>9</strong> y con las letras de la <strong>A</strong> a la <strong>F</strong>.</p>
+</li>
+<li>
+<p>Ya teniendo en cuenta el punto <strong>1</strong>, cuando hay dos grupos de ceros consecutivos <strong>( 0:0 )</strong> se sintetiza a <strong>( :: )</strong></p>
+</li>
+<li>
+<p>Otro punto a tener en cuenta es que, <strong>NO</strong> se permite tener dos res&#xFA;menes de ceros, o sea del punto tres de la imagen no se permite la segunda direcci&#xF3;n IP, lo que nos deja como v&#xE1;lido la primera direcci&#xF3;n IP, s&#xF3;lo se debe sintetizar los ceros una vez.</p>
+</li>
+<li>
+<p>Cuando una direcci&#xF3;n tiene tan solo cinco grupos de n&#xFA;meros como se ve en el punto <strong>4</strong> de la imagen, ya debemos darnos cuenta que nos hace falta tres grupos de n&#xFA;meros m&#xE1;s para completar los ocho grupos que tiene una direcci&#xF3;n IPv6, como podemos observar tenemos tres grupos m&#xE1;s de ceros en la parte de los dos puntos, dos veces <strong>( :: )</strong>.</p>
+</li>
+</ol>
+<p><strong>Resumen del Cap&#xED;tulo</strong></p>
+<ol>
+<li>
+<p>Unidad de Medidas Inform&#xE1;tica.</p>
+</li>
+<li>
+<p>Que es un Disco Duro y para que se usan.</p>
+</li>
+<li>
+<p>Que es una Partici&#xF3;n.</p>
+</li>
+<li>
+<p>Sistemas de Archivos.</p>
+</li>
+<li>
+<p>Que es la Memoria RAM del Computador.</p>
+</li>
+<li>
+<p>Conceptos B&#xE1;sicos de Redes de Datos.</p>
+</li>
+<li>
+<p>Hablando de las Direcciones IP</p>
+</li>
+</ol>
+<h2 class="mume-header" id="instalaci%C3%B3n-del-sistema-operativo-windows-server-2012-por-primera-vez">Instalaci&#xF3;n del Sistema Operativo Windows Server 2012 por Primera Vez</h2>
+
+<h3 class="mume-header" id="m%C3%B3dulo-3">M&#xF3;dulo 3</h3>
+
+<p>Este m&#xF3;dulo se dividir&#xE1; en tres partes diferentes, en la primera pausa pasaremos a la pr&#xE1;ctica de la instalaci&#xF3;n del Sistema Operativo (SO) de forma f&#xED;sica en el computador, la segunda pausa que tomaremos ser&#xE1; la instalaci&#xF3;n de forma virtual en el computador, luego continuaremos con la parte te&#xF3;rica de las caracter&#xED;sticas que traer&#xE1; el SO a nivel gr&#xE1;fico, luego de esto haremos una tercera pausa, pasaremos al SO ya instalado.</p>
+<p><strong>Arreglos de Discos para Servidores (Disk Array)</strong></p>
+<p>Antes de instalar un SO para servidores no es como instalar un SO para PC normal, instalar un Servidor requiere de muchos pasos previos que el sistema debe tomar en cuenta para poder seleccionar o para poder obtar por el <strong>Best Practice</strong> sobre lo que se est&#xE1; realizando el la Empresa, Compa&#xF1;&#xED;a, y Hogar.</p>
+<p>Para poder adquirir un Servidor no basta con ir donde el vendedor y decir &quot;Dame un Servidor&quot;. Yo debo saber a la hora de instalarlo para qu&#xE9; ser&#xE1; este Servidor, cu&#xE1;l ser&#xE1; su uso principal, As&#xED; como otras caracter&#xED;sticas principales como lo es el <strong>Disk Array</strong>.</p>
+<p>El Arreglo de Disco o <strong>Disk Array</strong> es b&#xE1;sicamente utilizado casi en la mayor&#xED;a en los Servidores robustos o Servidores grandes, que demandan gr&#xE1;n catidad de datos.</p>
+<p>Cuando compramos un Servidor, siempre nos preguntan &#xBF;Cu&#xE1;ntos Discos Duros tendr&#xE1; el Servidor?, ya sabemos que es un Disco Duro de hecho sabemos hasta la cantidad de almacenamiento que estos tienen hoy en d&#xED;a.</p>
+<p><strong>Que es un Arreglo de Disco (RAID)</strong></p>
+<p>Un grupo/matriz redundante de discos independientes, del ingl&#xE9;s Redundant Array of Independent Disks.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img01.png" alt="Imagen mod03_img01"></p>
+<p>Un Arreglo de Disco <strong>RAID</strong> es un conjunto de discos que funcionan en un conjunto formando una s&#xF3;la unidad l&#xF3;gica, por ejemplo, se puede tener 5 discos de 100Gb, de estos 4 se usan para almacenar la informaci&#xF3;n, y el quinto como paridad, para verificar la informaci&#xF3;n, dichos discos en conjunto se ver&#xE1;n como una sola unidad l&#xF3;gica de 400GB s&#xF3;lamente, o sea si tenemos 5 discos duros y hacemos un Arreglo de Disco con &#xE9;l, depende al tipo de Arreglo que hagamos podemos tener los mismos 5 duros que se v&#xE9; como una sola unidad de 400Gb siendo cada uno de 100Gb, normalmente uno como administrador de sistemas dir&#xED;amos que se pierde, pero no es que se pierde, es que el disco duro se queda como <strong>paridad</strong> para verificar la iformaci&#xF3;n que se v&#xE1; guardando.</p>
+<blockquote>
+<p>Los c&#xF3;digos de paridad se usan en telecomunicaciones para detectar, y en algunos casos corregir, errores en la transmisi&#xF3;n. Para ellos se a&#xF1;ade en origen un bit extra llamado bit de paridad a los n bits que forman el car&#xE1;cter original.<br>
+Este valor del bit de paridad se determina de forma que el n&#xFA;mero total de bits 1 a transmitir sea par (c&#xF3;digo de paridad par) o impar (c&#xF3;digo de paridad impar).</p>
+</blockquote>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img02.png" alt="Imagen mod03_img02"></p>
+<p>Esto implica, pricipalmente a que las <strong>SAN</strong> (Storage &#xC1;rea Network), &#xC1;rea de Red de Almacenamiento las cuales se encargan de distribuir las cargas sobre los Arreglos de Discos, otra versi&#xF3;n de las <strong>SAN</strong> son las <strong>NAS</strong>  (Network Attached Storage), Almacenamiento Conectado en Red.</p>
+<p><strong>Caracter&#xED;sticas principales de (RAID)</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img03.png" alt="Imagen mod03_img03"></p>
+<p><strong>Niveles principales de (RAID)</strong></p>
+<p>Existen distintos niveles de <strong>RAID</strong>, los m&#xE1;s com&#xFA;nes son: 0, 1, 5, y los h&#xED;bridos, no tienen paridad ni redundancia, simplemente la distribuci&#xF3;n equitativa de los bloques de datos entre los distintos discos que lo componen</p>
+<p>En el nivel <strong>RAID 0</strong> si uno de los discos que lo componen es menor en capacidad, &#xE9;sta determinar&#xE1; el tama&#xF1;o para el resto de Disco aunque tenga una capacidad mayor.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img04.png" alt="Imagen mod03_img04"></p>
+<p>En <strong>RAID 1</strong> se hace una copia de cada bloque guardado en los distintos discos que conforma la unidad l&#xF3;gica de manera ideal, se hace sobre pares de discos, y nuevamente el disco con menor capacidad determina el factor para calcular el tama&#xF1;o completo para el Arreglo, este nivel es &#xFA;til cuando no se tiene tanto problema por espacio, y se requiere un buen rendimiento de lectura y confiabilidad de los datos, as&#xED; mientras m&#xE1;s discos sean miembros del Arreglo se incrementar&#xE1;n dichas ventajas.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img05.png" alt="Imagen mod03_img05"></p>
+<p>Un RAID 5 (tambi&#xE9;n llamado distribuido con paridad) es una divisi&#xF3;n de datos a nivel de bloques que distribuye la informaci&#xF3;n de paridad entre todos los discos miembros del conjunto. El RAID 5 ha logrado popularidad gracias a su bajo coste de redundancia. Generalmente, el RAID 5 se implementa con soporte hardware para el c&#xE1;lculo de la paridad. RAID 5 necesitar&#xE1; un m&#xED;nimo de 3 discos para ser implementado.</p>
+<p>No est&#xE1; en nivel de Arreglo, se hace un strip a nivel de bloque m&#xE1;s un bloque paridad para mantener la seguridad en los bloques de los discos restantes, de esta forma bajo este esquema se obtiene mucha seguridad en los datos, sin sacrificar espacio en los discos, si tuvieramos un esquema RAID 1 y tuvieramos 4 discos de 100Gb, el espacio para guardar la informaci&#xF3;n ser&#xED;a de 200Gb, por que hay que recordad que se replican los bloques en cada disco, pero Raid 5 se puede tener hasta 300Gb por lo mismo que explicamos al principio de la p&#xE9;rdida de un disco de paridad.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img06.png" alt="Imagen mod03_img06"></p>
+<p>Tenemos tambi&#xE9;n los niveles h&#xED;bridos, por ejemplo el <strong>RAID 0+1</strong> es el resultado de mezclar el nivel 0, y el nivel 1, es un espejo de strip, es decir al mismo tiempo que es un strip, se maneja otro conjunto de discos que hace un espejo de dicho strip, tiene un m&#xED;nimo de 4 discos y al estar mezclados los dos tipos de RAID mencionados asegura la informaci&#xF3;n un poco m&#xE1;s sin desperdiciar la eficiencia al consultar la informaci&#xF3;n guardada en ellos.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img07.png" alt="Imagen mod03_img07"></p>
+<p>El <strong>RAID 1+0</strong>, &#xE9;ste tambi&#xE9;n es un h&#xED;brido de RAID 0+1 sin embargo est&#xE1; invertido a lo que explicamos anteriormente, la parte pr&#xE1;ctica para hacer el Arreglo de Disco es bien sencillo, existen aplicaciones que vienen con nuestro servidor que se encargan de ayudarnos a seleccionar el tipo de Arreglo deceado.</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img08.png" alt="Imagen mod03_img08"></p>
+<p><strong>Requisitos para instalar Windows Server 2012</strong></p>
+<p>Los requisitos a nivel de Hardware son:</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img09.png" alt="Imagen mod03_img09"></p>
+<blockquote>
+<p>Recomendamos tener una capacidad m&#xED;nima de 4Gb de RAM</p>
+</blockquote>
+<p>Los requisitos a nivel de Software son:</p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img10.png" alt="Imagen mod03_img10"></p>
+<p><strong>Instalaci&#xF3;n Paso a Paso Windows Server 2012</strong></p>
+<h2 class="mume-header" id="pr%C3%A1ctica-de-laboratorio">Pr&#xE1;ctica de Laboratorio</h2>
+
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img11.png" alt="Imagen mod03_img11"></p>
+<h3 class="mume-header" id="m%C3%B3dulo-4">M&#xF3;dulo 4</h3>
+
+<p><strong>Verificaci&#xF3;n de la autenticidad de la Licencia</strong></p>
+<p><img src="https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/imgM04_01.png" alt="Imagen M04_01"></p>
+<p><strong>Nombre para el Servidor</strong></p>
+<p>&#xBF;Por que un nombre para el Server?</p>
+<hr>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"></pre><h3 class="mume-header" id="power-shell">Power Shell</h3>
+
+<p><strong>Cambiar nombre del Servidor</strong></p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token operator">&gt;</span> powershell
+<span class="token operator">&gt;</span> <span class="token function">hostname</span>
+WIN-4F0L49ABEF8
+<span class="token operator">&gt;</span> rename-computer PSDC-HOJA
+WARNING: The changes will take effect after you restart the computer WIN-4F0L49ABEF8.
+<span class="token operator">&gt;</span> <span class="token function">shutdown</span> /s
+</pre><p><strong>Definir una IP Est&#xE1;tica</strong></p>
+<p>Un punto muy importante es decir a que InterfaceAlias quiero aplicar el cambio</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token operator">&gt;</span> Get-netipaddress
+IPAddress       <span class="token keyword">:</span> fe80::5efe:192.168.1.10%13
+InterfaceIndex  <span class="token keyword">:</span> 13
+InterfaceAlias  <span class="token keyword">:</span> isatap.<span class="token punctuation">{</span>2426A078-DAA7-4DF7-911E-2DB9F068ABBA<span class="token punctuation">}</span>
+AddressFamily   <span class="token keyword">:</span> IPv6
+Type            <span class="token keyword">:</span> Unicast
+<span class="token punctuation">..</span>.
+<span class="token operator">&gt;</span> New-netipaddress
+cmdlet New-NetIPAddress at <span class="token function">command</span> pipe line position 1
+Supply values <span class="token keyword">for</span> the following parameters:
+IPAddress: 192.168.1.1
+InterfaceAlias: ethernet
+<span class="token operator">&gt;</span> cls
+</pre><p>Habilitar el Remote Desktop</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

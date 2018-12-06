@@ -1,5 +1,6 @@
 # Resumen del Curso CAPACITY
 
+## Hablando de los Sistemas Operativos para Servidores
 ### Módulo 1
 
 __Objetivo pricipal del Sistema Operativo:__
@@ -119,6 +120,28 @@ __Comandos mas usados para Power Shell__
 __Puntos importantes para adquirir un Servidor__
 
 ![Imagen 18](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen18.png)
+
+__Resumen del Capítulo__
+
+1. Que es un Sistema Operativo.
+
+2. Funciones del Sistema Operativo.
+
+3. Sistemas Operativos para Estaciones de Trabajo.
+
+4. Sistemas Operativos para Servidores.
+
+5. Hablando de Windows Server 2012.
+
+6. Versiones de Windows Server 2012.
+
+7. Nuevas Características de Windows Server 2012.
+
+8. Power Shell de Windows.
+
+9. Puntos a tener en cuenta para adquirir un Servidor.
+
+## Conceptos Básicos para trabajar con Windows Server 2012
 
 ### Módulo 2
 
@@ -257,7 +280,148 @@ __Entrando en IPv6__
 
 __Por que se esta migrando a IPv6__
 
+La Comporación de Inernet para la Asignación de Nombres y Números, en inglés __Internet Corporation for Assigned Names and Numbers (ICANN)__, es una organización sin fines de lucro, con el objetivo principal de encargarse de sierto números de tareas realizadas con anterioridad a esa fecha por otra organización que era la __IANA__ sucede y radica en California y está sujeta a las leyes de dicho Estado, en pocas palabras __ICANN__ es quien tiene el Almacén de direcciones IP, la fábrica de IP tiene muchas cajas de direcciones IP posibles.
+
 ![Imagen 39](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen39.png)
+
+__¿Que es IPv6?__
+
+Una dirección IPv4, es una dirección IP de 32bits, y está clasificado o dividida en cuatro grupo de números dividido por puntos.
+
+![Imagen 40](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen40.png)
+
+IPv6 es una dirección de ocho grupos de numeraciones divididas por dos putos, tienen 128bits.
+
+![Imagen 41](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen41.png)
+
+__Puntos a tener en cuenta__
+
+Hay que tener cuatro puntos bien claro:
+
+![Imagen 42](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/Imagen42.png)
+
+>Antes de ver en detalle cada punto observe que cada punto cuenta con dos direcciones IP, la segunda es como debe ser la notación. 
+
+1. Esta dirección nos dice que los ceros delante de cada grupo se pueden omitir,no importa si las letras son mayúsculas o minúsculas, son números hexadecimales con los números del __0__ al __9__ y con las letras de la __A__ a la __F__.
+
+2. Ya teniendo en cuenta el punto __1__, cuando hay dos grupos de ceros consecutivos __( 0:0 )__ se sintetiza a __( :: )__
+
+3. Otro punto a tener en cuenta es que, __NO__ se permite tener dos resúmenes de ceros, o sea del punto tres de la imagen no se permite la segunda dirección IP, lo que nos deja como válido la primera dirección IP, sólo se debe sintetizar los ceros una vez.
+
+4. Cuando una dirección tiene tan solo cinco grupos de números como se ve en el punto __4__ de la imagen, ya debemos darnos cuenta que nos hace falta tres grupos de números más para completar los ocho grupos que tiene una dirección IPv6, como podemos observar tenemos tres grupos más de ceros en la parte de los dos puntos, dos veces __( :: )__.
+
+__Resumen del Capítulo__
+
+1. Unidad de Medidas Informática.
+
+2. Que es un Disco Duro y para que se usan.
+
+3. Que es una Partición.
+
+4. Sistemas de Archivos.
+
+5. Que es la Memoria RAM del Computador.
+
+6. Conceptos Básicos de Redes de Datos.
+
+7. Hablando de las Direcciones IP
+
+## Instalación del Sistema Operativo Windows Server 2012 por Primera Vez
+
+### Módulo 3
+
+Este módulo se dividirá en tres partes diferentes, en la primera pausa pasaremos a la práctica de la instalación del Sistema Operativo (SO) de forma física en el computador, la segunda pausa que tomaremos será la instalación de forma virtual en el computador, luego continuaremos con la parte teórica de las características que traerá el SO a nivel gráfico, luego de esto haremos una tercera pausa, pasaremos al SO ya instalado.
+
+__Arreglos de Discos para Servidores (Disk Array)__
+
+Antes de instalar un SO para servidores no es como instalar un SO para PC normal, instalar un Servidor requiere de muchos pasos previos que el sistema debe tomar en cuenta para poder seleccionar o para poder obtar por el __Best Practice__ sobre lo que se está realizando el la Empresa, Compañía, y Hogar.
+
+Para poder adquirir un Servidor no basta con ir donde el vendedor y decir "Dame un Servidor". Yo debo saber a la hora de instalarlo para qué será este Servidor, cuál será su uso principal, Así como otras características principales como lo es el __Disk Array__.
+
+El Arreglo de Disco o __Disk Array__ es básicamente utilizado casi en la mayoría en los Servidores robustos o Servidores grandes, que demandan grán catidad de datos.
+
+Cuando compramos un Servidor, siempre nos preguntan ¿Cuántos Discos Duros tendrá el Servidor?, ya sabemos que es un Disco Duro de hecho sabemos hasta la cantidad de almacenamiento que estos tienen hoy en día.
+
+__Que es un Arreglo de Disco (RAID)__
+
+Un grupo/matriz redundante de discos independientes, del inglés Redundant Array of Independent Disks.
+
+![Imagen mod03_img01](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img01.png)
+
+Un Arreglo de Disco __RAID__ es un conjunto de discos que funcionan en un conjunto formando una sóla unidad lógica, por ejemplo, se puede tener 5 discos de 100Gb, de estos 4 se usan para almacenar la información, y el quinto como paridad, para verificar la información, dichos discos en conjunto se verán como una sola unidad lógica de 400GB sólamente, o sea si tenemos 5 discos duros y hacemos un Arreglo de Disco con él, depende al tipo de Arreglo que hagamos podemos tener los mismos 5 duros que se vé como una sola unidad de 400Gb siendo cada uno de 100Gb, normalmente uno como administrador de sistemas diríamos que se pierde, pero no es que se pierde, es que el disco duro se queda como __paridad__ para verificar la iformación que se vá guardando.
+
+>Los códigos de paridad se usan en telecomunicaciones para detectar, y en algunos casos corregir, errores en la transmisión. Para ellos se añade en origen un bit extra llamado bit de paridad a los n bits que forman el carácter original.
+Este valor del bit de paridad se determina de forma que el número total de bits 1 a transmitir sea par (código de paridad par) o impar (código de paridad impar).
+
+![Imagen mod03_img02](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img02.png)
+
+Esto implica, pricipalmente a que las __SAN__ (Storage Área Network), Área de Red de Almacenamiento las cuales se encargan de distribuir las cargas sobre los Arreglos de Discos, otra versión de las __SAN__ son las __NAS__  (Network Attached Storage), Almacenamiento Conectado en Red.
+
+__Características principales de (RAID)__
+
+![Imagen mod03_img03](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img03.png)
+
+__Niveles principales de (RAID)__
+
+Existen distintos niveles de __RAID__, los más comúnes son: 0, 1, 5, y los híbridos, no tienen paridad ni redundancia, simplemente la distribución equitativa de los bloques de datos entre los distintos discos que lo componen
+
+En el nivel __RAID 0__ si uno de los discos que lo componen es menor en capacidad, ésta determinará el tamaño para el resto de Disco aunque tenga una capacidad mayor.
+
+![Imagen mod03_img04](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img04.png)
+
+En __RAID 1__ se hace una copia de cada bloque guardado en los distintos discos que conforma la unidad lógica de manera ideal, se hace sobre pares de discos, y nuevamente el disco con menor capacidad determina el factor para calcular el tamaño completo para el Arreglo, este nivel es útil cuando no se tiene tanto problema por espacio, y se requiere un buen rendimiento de lectura y confiabilidad de los datos, así mientras más discos sean miembros del Arreglo se incrementarán dichas ventajas.
+
+![Imagen mod03_img05](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img05.png)
+
+Un RAID 5 (también llamado distribuido con paridad) es una división de datos a nivel de bloques que distribuye la información de paridad entre todos los discos miembros del conjunto. El RAID 5 ha logrado popularidad gracias a su bajo coste de redundancia. Generalmente, el RAID 5 se implementa con soporte hardware para el cálculo de la paridad. RAID 5 necesitará un mínimo de 3 discos para ser implementado.
+
+No está en nivel de Arreglo, se hace un strip a nivel de bloque más un bloque paridad para mantener la seguridad en los bloques de los discos restantes, de esta forma bajo este esquema se obtiene mucha seguridad en los datos, sin sacrificar espacio en los discos, si tuvieramos un esquema RAID 1 y tuvieramos 4 discos de 100Gb, el espacio para guardar la información sería de 200Gb, por que hay que recordad que se replican los bloques en cada disco, pero Raid 5 se puede tener hasta 300Gb por lo mismo que explicamos al principio de la pérdida de un disco de paridad.
+
+![Imagen mod03_img06](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img06.png)
+
+Tenemos también los niveles híbridos, por ejemplo el __RAID 0+1__ es el resultado de mezclar el nivel 0, y el nivel 1, es un espejo de strip, es decir al mismo tiempo que es un strip, se maneja otro conjunto de discos que hace un espejo de dicho strip, tiene un mínimo de 4 discos y al estar mezclados los dos tipos de RAID mencionados asegura la información un poco más sin desperdiciar la eficiencia al consultar la información guardada en ellos.
+
+![Imagen mod03_img07](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img07.png)
+
+El __RAID 1+0__, éste también es un híbrido de RAID 0+1 sin embargo está invertido a lo que explicamos anteriormente, la parte práctica para hacer el Arreglo de Disco es bien sencillo, existen aplicaciones que vienen con nuestro servidor que se encargan de ayudarnos a seleccionar el tipo de Arreglo deceado.
+
+![Imagen mod03_img08](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img08.png)
+
+__Requisitos para instalar Windows Server 2012__
+
+Los requisitos a nivel de Hardware son:
+
+![Imagen mod03_img09](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img09.png)
+
+>Recomendamos tener una capacidad mínima de 4Gb de RAM
+
+Los requisitos a nivel de Software son:
+
+![Imagen mod03_img10](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img10.png)
+
+__Instalación Paso a Paso Windows Server 2012__
+
+## Práctica de Laboratorio
+
+![Imagen mod03_img11](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img11.png)
+
+#### Laboratorio 0
+Instalación de Windows Server en Servidor Físico[link]
+
+__Para instalar Windows de forma virtual__
+
+Una máquina virtual no es más que un software __capaz de cargar en su interior otro sistema operativo__ haciéndole creer que es un PC de verdad. Tal y como su nombre indica, el concepto es tan sencillo como crear una máquina (PC, consola, móvil o lo que sea) que en vez de ser física es virtual o emulada.
+
+![Imagen mod03_img12](https://github.com/garyDav/Blogs/blob/master/img/windows_server2012/mod03_img12.png)
+
+>El SO base puede ser cualquier distribución basado en GNU/linux que tenga soporte en virtualización.
+
+
+
+
+
+
+
 
 
 ### Módulo 4
