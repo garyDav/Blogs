@@ -421,11 +421,15 @@ Una máquina virtual no es más que un software __capaz de cargar en su interior
 
 #### Laboratorio 1
 
-En este laboratorio veremos la instalación en una máquina virtual como VMware Workstation versión 15
+En este laboratorio veremos la instalación de Windows Server 2012 R2 en una máquina virtual como VMware Workstation versión 15
 
-[Instalación de Windows Server 2012 en VMware Workstation v15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica02.md)
+[Instalación de Windows Server 2012 R2 en VMware Workstation v15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica02.md)
 
+#### Laboratorio 2
 
+En este laboratorio veremos otro tipo de instalación de Windows Server 2012 R2 en una máquina virtual como VMware Workstation versión 15
+
+[Otra forma de instalación de Windows Server 2012 R2 en VMware Workstation v15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica03.md)
 
 
 
