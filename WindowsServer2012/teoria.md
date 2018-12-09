@@ -3,11 +3,11 @@
 ## Hablando de los Sistemas Operativos para Servidores
 ### Módulo 1
 
-__Objetivo pricipal del Sistema Operativo:__
+__Objetivo pricipal del sistema operativo:__
 
 ![Imagen 1](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen1.png)
 
-__Funciones del Sistema Operativo:__
+__Funciones del sistema operativo:__
 
 1. Control de acceso a hardware
 
@@ -17,23 +17,23 @@ __Funciones del Sistema Operativo:__
 
 4. Administra aplicaciones
 
-__1. Funciones del Sistema Operativo (Control de Hardware)__
+__1. Funciones del sistema operativo (Control de Hardware)__
 
-El Sistema Operativo tiene 4 capas
+El sistema operativo tiene 4 capas
 
 ![Imagen 2](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen2.png)
 
-__2. Funciones del Sistema Operativo (Archivos y Carpetas)__
+__2. Funciones del sistema operativo (Archivos y Carpetas)__
 
 ![Imagen 3](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen3.png)
 
-__3. Funciones del Sistema Operativo (Interfaz de Usuario)__
+__3. Funciones del sistema operativo (Interfaz de Usuario)__
 
 ![Imagen 4](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen4.png)
 
 ![Imagen 5](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen5.png)
 
-__4. Funciones del Sistema Operativo (Administración de App)__
+__4. Funciones del sistema operativo (Administración de App)__
 
 ![Imagen 6](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen6.png)
 
@@ -67,13 +67,13 @@ Tenemos tres tipos de Sistemas Operativos para servidores:
 
 __Redhat__
 
-Puede ser descargado de internet, tiene vastantes programas socios, brinda un exlente rendimiento, seguridad, escalabilidad, y disponibilidad, es un SO de GNU/Linux, su nucleo está basado en Debian, este SO es utilizado de manera gratuita, auque muchas de las distribuciones de RedHat se compram auque a bajo costo.
+Puede ser descargado de internet, tiene vastantes programas socios, brinda un exlente rendimiento, seguridad, escalabilidad, y disponibilidad, es un sistema operativo de GNU/Linux, su nucleo está basado en Debian, este sistema operativo es utilizado de manera gratuita, auque muchas de las distribuciones de RedHat se compram auque a bajo costo.
 
 __Hablando de Windows Server 2012__
 
 ![Imagen 12](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen12.png)
 
-Es una edición lanzada por la compañía de Microsoft Corparation del SO Windows Server, su predecesor era Windows Server 2008 R2, el software está disponible desde el 4 de septiembre del 2012
+Es una edición lanzada por la compañía de Microsoft Corparation del sistema operativo Windows Server, su predecesor era Windows Server 2008 R2, el software está disponible desde el 4 de septiembre del 2012
 
 Windows Server 2012 no tiene soporte para computadoras con procesador de 32-bit (IA-32) o Itanium (IA-64), y se vende básicamente en 4 ediciones como: Datacenter, Standard, Essentials, y Foundation.
 
@@ -89,7 +89,7 @@ Windows Server 2012 solo viene estas 4 versiones, Windows Server 2008 ofrecía 1
 
 ![Imagen 15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/Imagen15.png)
 
-* Fundation: No tiene derecho a virtualización y no tiene varias obciones
+* Fundation: No tiene derecho a virtualización y no tiene varias opciones
 
 * Essentials: Tiene un derecho limitado a virtualización
 
@@ -123,9 +123,9 @@ __Puntos importantes para adquirir un Servidor__
 
 __Resumen del Capítulo__
 
-1. Que es un Sistema Operativo.
+1. Que es un sistema operativo.
 
-2. Funciones del Sistema Operativo.
+2. Funciones del sistema operativo.
 
 3. Sistemas Operativos para Estaciones de Trabajo.
 
@@ -326,15 +326,15 @@ __Resumen del Capítulo__
 
 7. Hablando de las Direcciones IP
 
-## Instalación del Sistema Operativo Windows Server 2012 por Primera Vez
+## Instalación del sistema operativo Windows Server 2012 por primera vez
 
 ### Módulo 3
 
-Este módulo se dividirá en tres partes diferentes, en la primera pausa pasaremos a la práctica de la instalación del Sistema Operativo (SO) de forma física en el computador, la segunda pausa que tomaremos será la instalación de forma virtual en el computador, luego continuaremos con la parte teórica de las características que traerá el SO a nivel gráfico, luego de esto haremos una tercera pausa, pasaremos al SO ya instalado.
+Este módulo se dividirá en tres partes diferentes, en la primera pausa pasaremos a la práctica de la instalación del sistema operativo de forma física en el computador, la segunda pausa que tomaremos será la instalación de forma virtual en el computador, luego continuaremos con la parte teórica de las características que traerá el sistema operativo a nivel gráfico, luego de esto haremos una tercera pausa, pasaremos al sistema operativo ya instalado.
 
 __Arreglos de Discos para Servidores (Disk Array)__
 
-Antes de instalar un SO para servidores no es como instalar un SO para PC normal, instalar un Servidor requiere de muchos pasos previos que el sistema debe tomar en cuenta para poder seleccionar o para poder obtar por el __Best Practice__ sobre lo que se está realizando el la Empresa, Compañía, y Hogar.
+Antes de instalar un sistema operativo para servidores no es como instalar un sistema operativo para PC normal, instalar un Servidor requiere de muchos pasos previos que el sistema debe tomar en cuenta para poder seleccionar o para poder obtar por el __Best Practice__ sobre lo que se está realizando el la Empresa, Compañía, y Hogar.
 
 Para poder adquirir un Servidor no basta con ir donde el vendedor y decir "Dame un Servidor". Yo debo saber a la hora de instalarlo para qué será este Servidor, cuál será su uso principal, Así como otras características principales como lo es el __Disk Array__.
 
@@ -407,6 +407,8 @@ __Instalación Paso a Paso Windows Server 2012__
 
 #### Laboratorio 0
 
+En este laboratorio veremos la instalación bien detallada del sistema operativo en un servidor físico.
+
 [Instalación de Windows Server 2012 en Servidor Físico](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica01.md)
 
 __Para instalar Windows de forma virtual__
@@ -415,9 +417,13 @@ Una máquina virtual no es más que un software __capaz de cargar en su interior
 
 ![Imagen mod03_img12](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img12.png)
 
->El SO base puede ser cualquier distribución basado en GNU/linux que tenga soporte en virtualización.
+>El sistema operativo base puede ser cualquier distribución basado en GNU/linux que tenga soporte en virtualización.
 
+#### Laboratorio 1
 
+En este laboratorio veremos la instalación en una máquina virtual como VMware Workstation versión 15
+
+[Instalación de Windows Server 2012 en VMware Workstation v15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica02.md)
 
 
 

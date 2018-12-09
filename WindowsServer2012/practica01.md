@@ -40,7 +40,7 @@ Luego de presionar una tecla, empezará a cargar los archivos.
 
 Una vez que termine de leer y cargar los archivos, aparecerá el logo típico de Windows, una vez que cargue nos aparece la primera ventana del asistente de instalación.
 
-Tiene la obción de elegir el lenguaje del sistema operativo, la hora, y la entrada del teclado. Una vez seleccionados las obciones deceadas, precionamos click en el botón de siguiente "Next".
+Tiene la opción de elegir el lenguaje del sistema operativo, la hora, y la entrada del teclado. Una vez seleccionados las obciones deceadas, precionamos click en el botón de siguiente "Next".
 
 ![Imagen prac01_img10](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img10.png)
 
@@ -48,7 +48,7 @@ Luego nos aparece esta ventana, y presionamos en "Install now".
 
 ![Imagen prac01_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img11.png)
 
->No es el caso, pero si falla el sistema operativo más adelante podemos precionar en la obción "Repair your computer".
+>No es el caso, pero si falla el sistema operativo más adelante podemos precionar en la opción "Repair your computer".
 
 Después de hacer click en "Install now", automáticamente nos dice que la configuración está iniciando y se pondrá a leer.
 
@@ -66,7 +66,7 @@ Debajo de estas obciones, tendremos dos partes: una es la colección de la infor
 
 ![Imagen prac01_img15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img15.png)
 
-Cuando seleccionamos la obción deseada y le damos click en siguiente "Next"
+Cuando seleccionamos la opción deseada y le damos click en siguiente "Next"
 
 ![Imagen prac01_img16](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img16.png)
 
@@ -82,7 +82,7 @@ Debemos tenerlo de esta manera
 
 ![Imagen prac01_img19](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img19.png)
 
-Luego nos aparece esta otra ventana, la cual nos pregunta que tipo de instalación deceamos instalar. Hay dos formas de instalacion, una es "Upgrade" y la otra "Custom", la parte de "Upgrade" es si tenemos un sistema operativo viejo como Windows Server 2008 y si queremos actualizar al de 2012, esta obción es la adecuada, pero en caso de querer una instalación perzonalidada "Custom", ya que estamos instalando el sistema operativo por primera vez es ese disco duro.
+Luego nos aparece esta otra ventana, la cual nos pregunta que tipo de instalación deceamos instalar. Hay dos formas de instalacion, una es "Upgrade" y la otra "Custom", la parte de "Upgrade" es si tenemos un sistema operativo viejo como Windows Server 2008 y si queremos actualizar al de 2012, esta opción es la adecuada, pero en caso de querer una instalación perzonalidada "Custom", ya que estamos instalando el sistema operativo por primera vez es ese disco duro.
 
 ![Imagen prac01_img20](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img20.png)
 
@@ -118,7 +118,7 @@ Una vez eliminadas todas las particiones que teníamos antes, vemos que tenemos 
 
 ![Imagen prac01_img28](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac01_img28.png)
 
-Después de precionar en la obción nuevo "New", nos muestra el tamaño (size) completo del disco duro.
+Después de precionar en la opción nuevo "New", nos muestra el tamaño (size) completo del disco duro.
 
 Podemos particionar el disco duro pero dejaremos que solo haya una partición para el sistema operativo.
 
