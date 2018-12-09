@@ -62,7 +62,7 @@ Luego procedemos con la instalación de Windows Server 2012.
 
 __Para mayor detalle__
 
-Para ver a mayor detalle esta instalación puede ir a la [Primera práctica](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica01.md)
+Para ver a mayor detalle esta instalación, puede ir a la [Primera práctica](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica01.md)
 
 ![Imagen prac03_img15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/prac03_img15.png)
 

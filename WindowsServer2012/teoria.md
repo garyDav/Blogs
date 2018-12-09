@@ -401,16 +401,6 @@ Los requisitos a nivel de Software son:
 
 __Instalación Paso a Paso Windows Server 2012__
 
-## Práctica de Laboratorio
-
-![Imagen mod03_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img11.png)
-
-#### Laboratorio 0
-
-En este laboratorio veremos la instalación bien detallada del sistema operativo en un servidor físico.
-
-[Instalación de Windows Server 2012 en Servidor Físico](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica01.md)
-
 __Para instalar Windows de forma virtual__
 
 Una máquina virtual no es más que un software __capaz de cargar en su interior otro sistema operativo__ haciéndole creer que es un PC de verdad. Tal y como su nombre indica, el concepto es tan sencillo como crear una máquina (PC, consola, móvil o lo que sea) que en vez de ser física es virtual o emulada.
@@ -419,66 +409,176 @@ Una máquina virtual no es más que un software __capaz de cargar en su interior
 
 >El sistema operativo base puede ser cualquier distribución basado en GNU/linux que tenga soporte en virtualización.
 
-#### Laboratorio 1
+__Seguridad inicial para el sistema operativo__
+
+La seguridad de informática, es el área de la informática que se enfoca en la protección de la infraestructura computacional y todo lo relacionado con esta, para ello existe una serie de estándares, métodos, reglas, herramientas, y leyes concebidas, para minimizar o mitigar los posibles riesgos a la información, la seguridad informática comprente, software, base de datos, meta datos, archivos, y todo lo que la organización valore activo y signifique un riesgo si esta llega a manos de otra persona, este tipo de información se conoce como información privilegiada ó confidencial.
+
+En pocas palabras todo lo que está en nuestro sistema operativo necesita estar salvaguardado para evitar que llegue a manos de alguien no deceado.
+
+![Imagen mod03_img13](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img13.png)
+
+Para la seguridad para los sistemas operativos, tenemos requisitos y características:
+
+![Imagen mod03_img14](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img14.png)
+
+__Nueva característica para Roles a servidores Remotos__
+
+__Roles a Servidores Remotos__
+
+Con el __Server Manager__, podemos hacer deploy en cualquier servidor de la red, con el solo hecho de agregarlo, podemos instalar cualquier rol ó característica de forma remota, por ejemplo si tenemos cinco servidores y todos tienen Windows Server 2012, de un servidor principal podemos instalar roles o características o actualizaciones, a otros servidores conectados en la red.
+
+![Imagen mod03_img15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img15.png)
+
+__Resumen del Capítulo__
+
+1. Arreglos de Discos.
+
+2. Requisitos para la instalación de Windows Server 2012.
+
+3. Instalación paso a paso de Windows Server 2012.
+
+4. Primer ambiente de Windows Server 2012.
+
+5. Nueva consola de administración de servidores.
+
+6. Seguridad inicial para el sistema operativo.
+
+7. Actualizaciones a nivel general.
+
+## Práctica de Laboratorio
+
+![Imagen mod03_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img11.png)
+
+#### Práctica 1
+
+En este laboratorio veremos la instalación bien detallada del sistema operativo en un servidor físico.
+
+[Instalación de Windows Server 2012 en Servidor Físico](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica01.md)
+
+#### Práctica 2
 
 En este laboratorio veremos la instalación de Windows Server 2012 R2 en una máquina virtual como VMware Workstation versión 15
 
 [Instalación de Windows Server 2012 R2 en VMware Workstation v15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica02.md)
 
-#### Laboratorio 2
+#### Práctica 3
 
 En este laboratorio veremos otro tipo de instalación de Windows Server 2012 R2 en una máquina virtual como VMware Workstation versión 15
 
 [Otra forma de instalación de Windows Server 2012 R2 en VMware Workstation v15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica03.md)
 
+#### Práctica 4
 
+En este laboratorio veremos como descargar y actualizar las últimas actualizaciones de nuestro sistema operativo.
 
+[Windows Update](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica04.md)
 
+## Configuración básica del sistema operativo
 
 ### Módulo 4
 
-__Verificación de la autenticidad de la Licencia__
+__Verificación de la autenticidad del sistema operativo__
 
-![Imagen M04_01](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/imgM04_01.png)
+![Imagen mod04_img01](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img01.png)
 
 __Nombre para el Servidor__
 
-¿Por que un nombre para el Server?
+__Por que un nombre para el Server__
 
-____
-```shell
-```
-### Power Shell
+Todo computador nodo o host, necesita un nombre para ser identificado, este nombre no debe repetirse por ningún otro nodo en la red, por que causaría el conflicto en la red y dejaría de funcionar uno de los dos, el nombre identifica básicamente como se llamnará el computador en la red.
 
-__Cambiar nombre del Servidor__
+![Imagen mod04_img02](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img02.png)
 
-```shell
-> powershell
-> hostname
-WIN-4F0L49ABEF8
-> rename-computer PSDC-HOJA
-WARNING: The changes will take effect after you restart the computer WIN-4F0L49ABEF8.
-> shutdown /s
-```
+![Imagen mod04_img03](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img03.png)
 
-__Definir una IP Estática__
+__Acerca de ITIL y las recomendaciones de este__
 
-Un punto muy importante es decir a que InterfaceAlias quiero aplicar el cambio
+__Que es ITIL__
 
-```shell
-> Get-netipaddress
-IPAddress       : fe80::5efe:192.168.1.10%13
-InterfaceIndex  : 13
-InterfaceAlias  : isatap.{2426A078-DAA7-4DF7-911E-2DB9F068ABBA}
-AddressFamily   : IPv6
-Type            : Unicast
-...
-> New-netipaddress
-cmdlet New-NetIPAddress at command pipe line position 1
-Supply values for the following parameters:
-IPAddress: 192.168.1.1
-InterfaceAlias: ethernet
-> cls
-```
+La biblioteca de infraestructura de tecnologías de información __(ITIL)__, es un conjunto de conceptos y prácticas para la gestion de servicios de tecnologías de la información, el desarrollo de tecnologías de la información van relacionadas con la misma en general, esto incluye las mejores prácticas en consejos habituales para el mejor manejo de tecnologías de la información en el día a día.
 
-Habilitar el Remote Desktop
+![Imagen mod04_img04](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img04.png)
+
+__ITIL__ se basa en una estructura de mejora continua del servicio, donde muestra básicamente tres pasos fundamentales.
+
+1. Servicio de diseño: donde yo diseño una solución.
+
+2. Servicio de transición: donde yo transfiero lo que es la información de esa solución.
+
+3. Servicio de operación: donde se opera la estrategia de servicio a fin de solucionar el problema.
+
+__ITIL__ dá descripciones detalladas de un extenso conjunto de procedimientos de gestion ideados para ayudar a las organizaciones a lograr calidad y eficiencia a las operaciones de tecnologías de información, estos procedimientos son independientes del proveedor y han sido desarrollados para servir como guía de toda la infraestructura, desarrollo y operaciones de tecnología de información.
+
+![Imagen mod04_img05](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img05.png)
+
+__Consejos básicos de ITIL para los AS__
+
+![Imagen mod04_img06](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img06.png)
+
+__Consideraciones para la asignación de Direcciones IP y nombres__
+
+__Considerando las Direcciones IP__
+
+Debemos tomar en cuenta el tamaño de la red y un posible crecimiento de la misma, si poseemos una red privada que poseerá 35 a 45 computadoras, podemos trabajar tranquilamente con la __Clase C__, donde la dirección __IP__ es asignada por el último octeto, ahora si tendrémos más computadoras, como 200 a 400, en ese caso obtaríamos por la __Clase B__.
+
+![Imagen mod04_img07](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img07.png)
+
+__Considerando los nombres de Equipo__
+
+Si tenemos dos servidores, uno llamado Hulk y otro Thor, y tenemos estaciones de trabajo, no podemos tener dos host con el mismo nombre, ya que esto causaría conflicto con una de ellas. Lo más recomendable para el sistema completo de la red, debemos tener un nombre diferente para cada equipo.
+
+![Imagen mod04_img08](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img08.png)
+
+__Dirección IP para el Servidor__
+
+Debemos tomar en cuenta que __IP__ se le están asignando a los equipos, esto si no estamos manejando __DHCP__, siempre es bueno anotar y documentarse todo lo que se está configurando en el servidor.
+
+![Imagen mod04_img09](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img09.png)
+
+__IP Address Managment de Windows Server 2012__
+
+__Que es IPAM de Windows Server__
+
+Proporciona administración y supervisión de los servidores que ejecutal el protocolo de configuración dinámica de host __DHCP__ y el servicio de nombres de domínio __DNS__.
+
+![Imagen mod04_img10](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img10.png)
+
+__IPAM__ incorpora en sí, todos los que són nuestros servicios, así como también una centralización del manejo de las direcciones __IP__ que los servidores poseen dentro del sistema. __IPAM__ incluye componentes para los siguientes: por ejemplo detección automática de infraestructura de direcciones IP.
+
+![Imagen mod04_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img11.png)
+
+__Componentes de IPAM__
+
+Se bása especificamente en mantener todo centralizado, todo lo que tenga que ver con nombres y direcciones IP.
+
+![Imagen mod04_img12](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img12.png)
+
+__Observación general del Servidor__
+
+Es importante saber si el servidor es un Mail Server, File Server, Aplication Server, DNS Server, eso nosotros lo determinaremos.
+
+![Imagen mod04_img13](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod04_img13.png)
+
+__Resumen del Capítulo__
+
+1. Verificación de la Autenticidad del Software o Licencia.
+
+2. Nombre para el Servidor.
+
+3. Acerca de ITIL y las recomendaciones de este.
+
+4. Consideraciones del tamaño de la red para las IP y Nombres.
+
+5. IP Address Management IPAM.
+
+6. Chequeo General del Servidor.
+
+## Práctica de Laboratorio
+
+![Imagen mod03_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img11.png)
+
+#### Práctica 5
+
+En este laboratorio veremos algunas configuraciónes básicas antes de crear el domínio.
+
+[Configuraciones Básicas](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica05.md)
