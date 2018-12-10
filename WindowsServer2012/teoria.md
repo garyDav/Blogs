@@ -582,3 +582,85 @@ __Resumen del Capítulo__
 En este laboratorio veremos algunas configuraciónes básicas antes de crear el domínio.
 
 [Configuraciones Básicas](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica05.md)
+
+## Configuración del Active Directory Domain Services a nivel Básico
+
+### Módulo 5
+
+__Importancia del Directorio Activo en un Servidor__
+
+__Que es un Controlador de Dominio DC__
+
+Los controladores de dominio tienen una serie de responsabilidades, una de ellas es la autenticación, la autenticación es el proceso de aceptar o denegar el acceso a un recurso compartido ó a otro máquina de la red, normalmente mediante el uso de una contraseña.
+
+![Imagen mod05_img01](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img01.png)
+
+Cada controlador de dominio usa un __Security Account Manager__, para mantener una lista de pares de nombres de usuarios y contraseñas, créa un repositorio centralizado de contraseñas que están enlazados a los nombres de usuarios, lo cual es más eficiente mantener centenares de contraseñas para cada recurso de la red disponible.
+
+![Imagen mod05_img02](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img02.png)
+
+__Que es Active Directory__
+
+Es el término que usa Microsoft para referirse a su implementación de servicios de directorios, en una red distribuida de computadores, permite a los administradores establecer políticas a nivel de empresa desplegar programas a múchos ordenadores y aplicar actualizaciones críticas a uan organización entera.
+
+Un __Active Directory__, almacena información de una organización en una base de datos central, organizada y accecible, pueden encontrarse desde directorios con cientos de objetos para una red pequeña, hasta directorios con millones de objetos, usa el protocolo __ldap__.
+
+Microsoft se refiere al __Active Directory__ como un triángulo, el cual recibe el nombre de Dominio, el cual tiene unidades organizacionales, estas son carpetas, y dentro de estas tenemos lo que son los usuarios, impresoras, grupos, y todos los recursos que se puedan compartir en la red.
+
+![Imagen mod05_img03](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img03.png)
+
+El funcionamiento de este es similar a la estructura __ldap__. Una de las ventajas de __Active Directory__ es sincronización presente entre los distintos servidores de autenticación de todo el dominio. Por ejemplo en la imágen siguiente el triángulo grande es una organización de __Active Directory__ uno ya creado, dentro de él podemos tener políticas de dominio ó __Group Policy Object__, cada hoja significa que tiene una política de grupo, dentro de este __Active Directory__ tenemos una unidadad organizacional que se llama ventas __"Sales"__ y dentro de este están todos los usuarios que trabajan en ese departamento, por medio de __Active Directory__ podemos decir que los usuarios de ventas tengan solamente acceso a dos paquetes, también tenemos otra unidad organizacional que es para personas de Marketing que tendrán acceso a esos tres paquetes observados en la imagen.
+
+![Imagen mod05_img04](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img04.png)
+
+__Analogía para entender Active Directory__
+
+Microsoft quiere tomar la analogía de los bosques para referirse a los bosques que se crean en un servicio de directorio activo. Diremos pues que los usuarios son recursos, al igual que una impresora y demás..., cada uno de estos recursos representa una fruta.
+
+![Imagen mod05_img05](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img05.png)
+
+![Imagen mod05_img06](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img06.png)
+
+Ahora bien un árbol tiene diversos frutos, así mismo un árbol se le llama al active directory __Domain Services__, el cual puede tener dentro diferentes frutos, un active directory que forma el árbol y dentro de este los frutos que serían los usuarios, las impresoras, etc. 
+
+![Imagen mod05_img07](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img07.png)
+
+Podemos tener también un bosque, lleno de árboles, también yo puedo tener un forest, un bosque lleno de árboles que serían los active directory.
+
+![Imagen mod05_img08](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img08.png)
+
+__Requisitos para Implementar AD DS__
+
+Los requisitos pueden variar dependiendo del tipo de servicio de directorio que se desee implementar.
+
+![Imagen mod05_img09](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img09.png)
+
+__Requisitos para la Instalación de AD DS__
+
+![Imagen mod05_img10](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img10.png)
+
+__Nivel Funcional de Windows Server__
+
+Cuando se crea un dominio, éste toma un nivel funcional que determina su nivel de compatibilidad con los controladores de dominio, básocamemte de comtroladores de dominio de versiones anteriores. Así por ejemplo cuando creamos un dominio desde Windows 2000 este nivel funcional queda en modo mixto para darnos compatibilidad con controladores de dominio NT 4, pero esto, hace que no se aprovechen todas las nuevas funcionalidades. Cada sistema operativo tiene un nivel funcional diferente.
+
+![Imagen mod05_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img11.png)
+
+El nivel funcional determinará específicamente, cómo funcionará mi dominio, pero si elejimos un nivel funcional inferior, puedo perder capacidades que el nivel funcional actual me permite. Me explico si tenemos Windows 2012 y elegimos un nivel funcional, o sea un nivel de funcionamiento a la del 2008 por ejemplo, se adaptará como si fuera la versión de 2008 para su funcionamiento, y ciertas características de nivel funcional del 2012 quizá no me funcione, por el nivel de funcionalidad seleccionado.
+
+![Imagen mod05_img12](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img12.png)
+
+__Comando DCPROMO (Domain Controller Promotion)__
+
+Este comando es usado principalmente para promover, el active directory domain services en un Servidor Windows, y de esta forma llamar al asistente para la configuración del mismo, y de esta forma llamar al asistente para la configuración del mismo y en este mismo sentido también, es usado para demostrar montar un dominio en caso de que sea necesario.
+
+![Imagen mod05_img13](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img13.png)
+
+Comandos del DCPROMO. 
+
+![Imagen mod05_img14](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img14.png)
+
+![Imagen mod05_img15](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img15.png)
+
+__Implementando AD DS__
+
+
