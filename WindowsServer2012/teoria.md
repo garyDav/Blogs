@@ -663,4 +663,20 @@ Comandos del DCPROMO.
 
 __Implementando AD DS__
 
+## Práctica de Laboratorio
 
+![Imagen mod03_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img11.png)
+
+#### Práctica 6
+
+En este laboratorio veremos algunas configuraciónes de active directory.
+
+[Configuraciones AD](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica06.md)
+
+#### Práctica 7
+
+Para esta práctica necesitamos tener instalado una verción __PRO__ de Windows, la versión __HOME__ de Windows no puede unirse a un dominio, por que es una versión orientada para la casa, mientras que la versión __Profesional__ es el sistema operativo para trabajar con domínios y controladores de domínios.
+
+En mi caso utilizaré __Windows 10 PRO__, uninemos este sistema operativo cliente a nuestro controlador de domínio.
+
+[Configuraciones con Windows 10 PRO](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/practica07.md)
