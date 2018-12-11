@@ -663,6 +663,70 @@ Comandos del DCPROMO.
 
 __Implementando AD DS__
 
+Aunque en la práctica nos vasaremos a instalar a nivél gráfico, también habrá ótra practica posterior donde lo veremos todo a nivel de comandos, lo recomendable es hacerlo desde el __Server Manager__ (Administrador del Servidor), ya que este está muy completo para realizar todas las configuraciones que querramos.
+
+![Imagen mod05_img16](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img16.png)
+
+__Preguntas en el Asistente para Implementar AD DS__
+
+![Imagen mod05_img17](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img17.png)
+
+__DNS Domain Name System__
+
+__Que es un Dominio o Dirección de Internet__
+
+Un dominio ó dirección de internet, es un red de identificación asociada a un grupo de dispositivos o equipos conectados a la red de internet, el propósito de los nombres de domínio de internet y del sistema de nombres de domínio DNS es traducir las direcciones IP, de cada nodo activo en la red a términos memorizables y fáciles de encontrar esta extacción hace posible que cualquier servicio de red pueda moverse de un lugar geográfico a otro a la red internet, aún cuando el cambio implique que tendrá una dirección IP diferente.
+
+Por ejemplo la dirección __"www.nombre.dominio"__ que se puede traducir de la siguiente forma __"www.capacity.com.do"__, esto es básicamente para lo que se utiliza __DNS__, para poder entender de mejor forma, ejecutaremos el __cmd__ y haremos ping a __www.google.com__.
+
+![Imagen mod05_img18](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img18.png)
+
+Observamos que la dirección IP que tiene este domínio es: `192.185.227.132`.
+
+![Imagen mod05_img19](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img19.png)
+
+>Cuando ingresamos a una página web e introducimos el domínio, por trasfondo lo que hace es ingresar a una dirección IP donde está alojado dicha página.
+
+__Dominios y Sub-dominios conocidos.__
+
+![Imagen mod05_img20](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img20.png)
+
+__Que es DNS (Domain Name System)__
+
+Es un sistema de nomenclatura geráriquica para computadoras, servicios, ó cualquier recurso conectado a internet ó a una red privada, este sistema asocia información variada con nombred de domínio, asignando a cada uno de los participantes, su función más importante es traducir ó resolver nombres inteligibles a identificadores binarios y asociados con los equipos conectados a la red.
+
+![Imagen mod05_img21](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img21.png)
+
+![Imagen mod05_img22](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img22.png)
+
+__Preguntas en el Asistente para Implemnetar DNS__
+
+![Imagen mod05_img23](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img23.png)
+
+__Preguntas en el Asistente para Implementar DNS__
+
+![Imagen mod05_img24](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img24.png)
+
+__Verificando AD DS__
+
+![Imagen mod05_img25](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img25.png)
+
+__Resumen del Capítulo__
+
+1. Hablando del Directorio Activo y su importancia.
+
+2. Analogía para entender Active Directory.
+
+3. Requisitos a tener en cuenta para la implementación de AD DS.
+
+4. Hablando del Comando DC Promo.
+
+5. Implementando Active Directory Domain Service.
+
+6. Configurando DNS.
+
+7. Verificación de la correcta instalación de AD DS.
+
 ## Práctica de Laboratorio
 
 ![Imagen mod03_img11](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod03_img11.png)
