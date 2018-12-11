@@ -699,7 +699,7 @@ Es un sistema de nomenclatura geráriquica para computadoras, servicios, ó cual
 
 ![Imagen mod05_img22](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img22.png)
 
-__Preguntas en el Asistente para Implemnetar DNS__
+__Preguntas en el Asistente para Implementar DNS__
 
 ![Imagen mod05_img23](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img23.png)
 
