@@ -677,7 +677,7 @@ __Que es un Dominio o Dirección de Internet__
 
 Un dominio ó dirección de internet, es un red de identificación asociada a un grupo de dispositivos o equipos conectados a la red de internet, el propósito de los nombres de domínio de internet y del sistema de nombres de domínio DNS es traducir las direcciones IP, de cada nodo activo en la red a términos memorizables y fáciles de encontrar esta extacción hace posible que cualquier servicio de red pueda moverse de un lugar geográfico a otro a la red internet, aún cuando el cambio implique que tendrá una dirección IP diferente.
 
-Por ejemplo la dirección __"www.nombre.dominio"__ que se puede traducir de la siguiente forma __"www.capacity.com.do"__, esto es básicamente para lo que se utiliza __DNS__, para poder entender de mejor forma, ejecutaremos el __cmd__ y haremos ping a __www.google.com__.
+Por ejemplo la dirección __"www.nombre.dominio"__ que se puede traducir de la siguiente forma __"www.capacity.com.do"__, esto es básicamente para lo que se utiliza __DNS__, para poder entender de mejor forma, ejecutaremos el __cmd__ y haremos ping a __www.capacity.com.do__.
 
 ![Imagen mod05_img18](https://github.com/garyDav/Blogs/blob/master/WindowsServer2012/img/mod05_img18.png)
 
