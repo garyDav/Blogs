@@ -24,7 +24,7 @@ Al hablar de **Dinámica de Sistemas** nos referimos a que las distintas variabl
 
 Las propiedades de un buen modelo:
 
-1. Debe de reflejar adecuadamente aquellas características del sistemaque son de nuestro interés.
+1. Debe de reflejar adecuadamente aquellas características del sistema que son de nuestro interés.
 
 2. Debe ser lo suficientemente sencillo como para resultar manejable.
 
@@ -42,7 +42,7 @@ A mediados de los años 60, Forrester propone la aplicación de la técnica que 
 
 ### Un Lenguaje Elemental Para La Descripción De Sistemas: Diagramas de Influencias
 
-Si $A$ y $B$ son dos partes de un sistema, el hecho de que $A$ influya sobre $B$ se representa mediante una flecha de la forma $A \to B$ e indica que $B$ es una función de $A$, es decir $B = f(A)$, aunque no conozcamos la forma matemática exacta de la función.
+Si $$A$$ y $B$ son dos partes de un sistema, el hecho de que $A$ influya sobre $B$ se representa mediante una flecha de la forma $A \to B$ e indica que $B$ es una función de $A$, es decir $B = f(A)$, aunque no conozcamos la forma matemática exacta de la función.
 
 ![Imagen03](https://github.com/garyDav/Blogs/blob/master/img/dinamica/img3.png)
 
