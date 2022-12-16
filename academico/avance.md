@@ -1,4 +1,4 @@
-# Avance de la nueva aplicación web acanémico para el Colegio DonBosco-Sucre en todos sus turnos, utilizando el Stack MERN
+# Avance de la nueva aplicación web académico para el Colegio DonBosco-Sucre en todos sus turnos, utilizando el Stack MERN
 
 [mern-stack]: ./img/mern-stack.png "MERN STACK"
 
