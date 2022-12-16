@@ -90,7 +90,7 @@ __Librerías para Módulo API:__
 
 * __jsonwebtoken:__ >= v8.5.1
 
->Cumple con el es un estándar abierto basado en JSON propuesto por IETF (RFC 7519) para la creación de tokens de acceso que permiten la propagación de identidad y privilegios
+>Cumple con el estándar abierto basado en JSON propuesto por IETF (RFC 7519) para la creación de tokens de acceso que permiten la propagación de identidad y privilegios
 
 * __module-db:__ module-db/server
 
