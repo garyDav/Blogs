@@ -1,4 +1,4 @@
-# Avance de la nueva aplicación web académico para el Colegio DonBosco-Sucre en todos sus turnos, utilizando el Stack MERN
+# Avance de la nueva aplicación web acanémico para el Colegio DonBosco-Sucre en todos sus turnos, utilizando el Stack MERN
 
 [mern-stack]: ./img/mern-stack.png 'MERN STACK'
 [workspace]: ./img/workspace.png 'MODULOS DEL SISTEMA'
@@ -97,11 +97,7 @@ Solo se implementó librerias específicas mientras se avanza en los módulos, e
 
 > Framework web minimalista, rápido y sin opiniones.
 
-<<<<<<< HEAD
->Cumple con el estándar abierto basado en JSON propuesto por IETF (RFC 7519) para la creación de tokens de acceso que permiten la propagación de identidad y privilegios
-=======
 - **express-fileupload:** >= v1.4.0
->>>>>>> 656639f (Avance Enero)
 
 > Middleware simple de carga rápida de archivos que envuelve a Busboy.
 
